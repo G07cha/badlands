@@ -80,8 +80,9 @@ function reflow() {
 
 
 function downloadImage() {
+  let filename = 'badlands' + Date.now() + '.png'
   canvas.toBlob(function(blob) {
-      saveAs(blob, "badlands.png");
+      saveAs(blob, filename);
   });
 }
 
